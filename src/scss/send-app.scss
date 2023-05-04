@@ -1,0 +1,234 @@
+.app {
+  &-section {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    column-gap: 60px;
+
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      width: 100vw;
+      height: 100%;
+      background-color: #fdf1f1;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding-left: 15px;
+      padding-right: 15px;
+
+      column-gap: 30px;
+    }
+
+    @media screen and (max-width: 821px) {
+      flex-direction: column;
+    }
+  }
+
+  &__image {
+    flex: 1 1 calc((100% - 60px) / 2);
+
+    width: calc((100% - 60px) / 2);
+    max-width: 570px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & > img {
+      min-height: 100%;
+      object-fit: cover;
+    }
+
+    @media screen and (max-width: 821px) {
+      min-width: 100vw;
+      max-width: unset;
+
+      justify-content: center;
+
+      margin-left: -15px;
+
+      aspect-ratio: 744 / 429;
+      overflow: hidden;
+
+      & > img {
+        min-height: unset;
+        min-width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    flex: 1 1 calc((100% - 60px) / 2);
+
+    padding-top: 90px;
+    padding-bottom: 90px;
+
+    &-q {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #000000;
+      opacity: 0.5;
+
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: #000000;
+
+      margin: 0 0 40px;
+      hyphens: auto;
+    }
+
+    @media screen and (max-width: 821px) {
+      padding-top: 40px;
+      padding-bottom: 44px;
+
+      &-q {
+        text-align: center;
+      }
+
+      &-title {
+        hyphens: none;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      padding-top: 26px;
+      padding-bottom: 30px;
+
+      &-q {
+        font-size: 16px;
+        text-align: left;
+      }
+      &-title {
+        text-align: left;
+        font-size: 24px;
+      }
+    }
+  }
+
+  &__form {
+    grid-area: form;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &-input {
+      flex: 1 1 calc((100% - 20px) / 2);
+      max-height: 50px;
+
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      outline: none;
+
+      padding: 13px 16px;
+
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+
+      &::placeholder {
+        font-family: 'Open Sans', sans-serif;
+        font-style: italic;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: #737373;
+      }
+    }
+
+    &-terms {
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 16px;
+      color: #000000;
+      opacity: 0.5;
+
+      & > a {
+        text-decoration: underline;
+        color: inherit;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+
+    &-submit {
+      flex: 0 0 275px;
+      max-height: 60px;
+
+      background: #0082ff;
+      border: none;
+      border-radius: 5px;
+      padding: 20px 0;
+
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+
+      color: #ffffff;
+    }
+
+    @media screen and (max-width: 821px) {
+      justify-content: center;
+      column-gap: 30px;
+      row-gap: 25px;
+
+      &-input {
+        flex: 1 1 calc((100% - 30px) / 2);
+      }
+
+      &-terms {
+        max-width: 519px;
+        text-align: center;
+      }
+
+      &-submit {
+        text-transform: initial;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      row-gap: 12px;
+
+      &-terms {
+        text-align: left;
+      }
+
+      &-submit {
+        max-height: 50px;
+        padding: 15px 0;
+        flex-grow: 1;
+      }
+    }
+  }
+}
