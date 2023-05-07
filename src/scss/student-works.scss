@@ -5,7 +5,6 @@ body {
 .works {
   &-section {
     max-width: 1200px;
-    margin: 0 auto;
     padding-top: 90px;
     padding-bottom: 90px;
 
@@ -41,6 +40,8 @@ body {
 
   &__wrapper {
     position: relative;
+    margin-right: -40px;
+    margin-left: -40px;
 
     @media screen and (max-width: 745px) {
       margin-left: -15px;
@@ -249,18 +250,27 @@ body {
   }
 
   &__show-all {
-    display: block;
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 20px;
     line-height: 27px;
-    text-align: center;
     color: #0082ff;
+
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
 
     &:hover {
       text-decoration: none;
       color: #0082ff;
+    }
+
+    &--icon {
+      background-image: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.570219 6.6113L0.558296 4.99485H9.73868L5.30348 0.260064L7.35416 0.260064L12.5405 5.79671L7.34224 11.3461L5.30348 11.3588L9.7506 6.6113L0.570219 6.6113Z' fill='%230082FF'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 13px;
     }
   }
 }
