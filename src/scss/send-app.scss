@@ -1,42 +1,29 @@
 .app {
   &-section {
-    max-width: 1200px;
-    margin: 0 auto;
+    --bg-color: #fdf1f1;
+    --text-color: #000000;
 
+    background-color: var(--bg-color);
+    width: 100vw;
+    overflow-x: hidden;
+  }
+
+  &__inner {
     display: flex;
-    column-gap: 60px;
 
     position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      left: 50%;
-      top: 0;
-      transform: translateX(-50%);
-      width: 100vw;
-      height: 100%;
-      background-color: #fdf1f1;
-    }
-
-    @media screen and (max-width: 1200px) {
-      padding-left: 15px;
-      padding-right: 15px;
-
-      column-gap: 30px;
-    }
-
-    @media screen and (max-width: 821px) {
+    @media screen and (max-width: 992px) {
       flex-direction: column;
     }
   }
 
   &__image {
-    flex: 1 1 calc((100% - 60px) / 2);
+    flex: 1 1 calc((100% - 40px) / 2);
 
-    width: calc((100% - 60px) / 2);
-    max-width: 570px;
+    width: calc((100% - 40px) / 2);
+    max-width: 540px;
+    margin-right: 40px;
 
     display: flex;
     justify-content: flex-end;
@@ -47,13 +34,14 @@
       object-fit: cover;
     }
 
-    @media screen and (max-width: 821px) {
-      min-width: 100vw;
+    @media screen and (max-width: 992px) {
       max-width: unset;
+      width: calc(100% + 30px);
 
       justify-content: center;
 
       margin-left: -15px;
+      margin-right: 0;
 
       aspect-ratio: 744 / 429;
       overflow: hidden;
@@ -78,8 +66,8 @@
       font-size: 18px;
       line-height: 120%;
       text-transform: uppercase;
-      color: #000000;
-      opacity: 0.5;
+      color: var(--text-color);
+      // opacity: 0.5;
 
       margin-bottom: 20px;
     }
@@ -88,15 +76,19 @@
       font-family: 'Montserrat', sans-serif;
       font-style: normal;
       font-weight: 700;
-      font-size: 50px;
+      font-size: 48px;
       line-height: 120%;
       text-transform: uppercase;
-      color: #000000;
+      color: var(--text-color);
 
       margin: 0 0 40px;
-      hyphens: auto;
     }
 
+    @media screen and (max-width: 1200px) {
+      &-title {
+        hyphens: auto;
+      }
+    }
     @media screen and (max-width: 821px) {
       padding-top: 40px;
       padding-bottom: 44px;
@@ -166,7 +158,7 @@
       font-weight: 400;
       font-size: 12px;
       line-height: 16px;
-      color: #000000;
+      color: var(--text-color);
       opacity: 0.5;
 
       & > a {
