@@ -48,3 +48,6 @@ function initDots() {
     }
   });
 }
+
+$('.works-section .works__wrapper').removeClass('--loading');
+$('.works-section .loader-wrapper').removeClass('--loading');

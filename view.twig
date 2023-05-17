@@ -1,0 +1,22 @@
+{% extends 'layouts.master' %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ asset('/css/modals/certificate-modal.css') }}">
+	{% if testDriveLessons|length > 0 and userTestDriveLessons|length == 0 %}
+		<link rel="stylesheet" href="{{ asset('/css/course/test-drive.css') }}">
+		<link rel="stylesheet" href="{{ asset('/css/quiz/quiz.css') }}">
+	{% endif %}
+{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class="container courses course-content {% if courseUser.is_paid or isAuthor %}course-content-buy{% endif %}">
+			<div class="courses-wrap row">
+				<main class="col-md-12">
+					
+				</main>
+			</div>
+		</div>
+	</div>
+
+	

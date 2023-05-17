@@ -1,3 +1,7 @@
-// @import 'test-drive.scss';
-@import 'send-app.scss';
+@import 'test-drive.scss';
+// @import 'send-app.scss';
 // @import 'student-works.scss';
+
+//common
+@import './common/form.scss';
+@import './common/button.scss';

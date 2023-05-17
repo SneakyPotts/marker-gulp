@@ -1,0 +1,12 @@
+<form class="send-form__custom @@extraClass" action="#">
+  <input class="send-form__custom-input" type="text" name="first-name" placeholder="Имя" />
+  <input class="send-form__custom-input" type="text" name="last-name" placeholder="Фамилия" />
+  <input class="send-form__custom-input" type="email" name="email" placeholder="E-mail" />
+  <input class="send-form__custom-input" type="tel" name="phone" placeholder="Телефон" />
+  <p class="send-form__custom-terms">
+    Нажимая на кнопку “Зарегистрироваться” принимаю <a href="#" target="_blank">условия пользовательского соглашения</a> (договора-оферты) и
+    <a href="#" target="_blank">политики обработки персональных данных</a>.
+  </p>
+
+  @@include('./button.html',{extraClass: 'send-form__submit', buttonText: 'ХОЧУ ПРОБНЫЙ УРОК'})
+</form>

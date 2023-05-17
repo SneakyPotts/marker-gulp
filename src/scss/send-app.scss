@@ -1,10 +1,14 @@
+body {
+  overflow-x: hidden;
+}
+
 .app {
   &-section {
     --bg-color: #fdf1f1;
     --text-color: #000000;
 
     background-color: var(--bg-color);
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
   }
 
@@ -29,7 +33,12 @@
     justify-content: flex-end;
     align-items: center;
 
-    & > img {
+    & > * {
+      height: 100%;
+    }
+
+    & img {
+      height: 100%;
       min-height: 100%;
       object-fit: cover;
     }
@@ -46,7 +55,12 @@
       aspect-ratio: 744 / 429;
       overflow: hidden;
 
-      & > img {
+      & > * {
+        width: 100%;
+        height: unset;
+      }
+
+      & img {
         min-height: unset;
         min-width: 100%;
       }
