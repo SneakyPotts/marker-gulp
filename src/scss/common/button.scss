@@ -4,12 +4,16 @@
     min-width: 275px;
     max-width: fit-content;
     height: fit-content;
-    min-height: 60px;
+    min-height: 50px;
 
-    background: #0082ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--btn-bg-color, #0082ff); 
     border: none;
     border-radius: 5px;
-    padding: 20px;
+    padding: 0 25px;
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -18,7 +22,9 @@
     letter-spacing: -0.01em;
     text-transform: uppercase;
 
-    color: #ffffff;
+    color: var(--btn-text-color, #fff);
+
+    box-shadow: none;
 
     @media screen and (max-width: 992px) {
       margin: 0 auto;

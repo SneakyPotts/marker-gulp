@@ -1,24 +1,24 @@
-<div class="container">
-  <section class="td-section" style="--text-color: tomato; --bg-color: green">
+  <section class="td-section" style="--text-color: tomato; --bg-color: green; --btn-bg-color: #0082ff; --btn-text-color: #fff;">
     <div class="td__image">
       <img src="@img/send-app.jpg" alt="test-drive image" />
     </div>
-    <div class="td__description">
-      <p class="td__caption">хочешь пройти тест драйв курса или урока?</p>
-      <h2 class="td__title">
-        <!-- <span>ТЕСТ ДРАЙВ</span> -->
-        <span>оставь заявку и мы свяжемся с вами для записи на пробный урок</span>
-      </h2>
-      <p class="td__description-text">
-        Вы можете прям сейчас пройти один из уроков курса, порисовать и познакомиться с лектором. Мы даем вам доступ к урокам “Материалы курса” и "Делаем градиенты правильно".
-        Регистрируйтесь и смотрите урок прямо сейчас.
-      </p>
+    <div class="td__inner">
+      <div class="td__description">
+        <p class="td__caption">хочешь пройти тест драйв курса или урока?</p>
+        <h2 class="td__title">
+          <!-- <span>ТЕСТ ДРАЙВ</span> -->
+          <span>оставь заявку и мы свяжемся с вами для записи на пробный урок</span>
+        </h2>
+        <p class="td__description-text">
+          Вы можете прям сейчас пройти один из уроков курса, порисовать и познакомиться с лектором. Мы даем вам доступ к урокам “Материалы курса” и "Делаем градиенты правильно".
+          Регистрируйтесь и смотрите урок прямо сейчас.
+        </p>
+      </div>
+  
+      <!-- isAuth == false -->
+      @@include('./common/form.html',{extraClass: 'td__form'})
+  
+      <!-- isAuth == true -->
+      @@include('./common/button.html',{extraClass: 'td__form', buttonText: 'Оставить запрос на консультацию'})
     </div>
-
-    <!-- isAuth == false -->
-    @@include('./common/form.html',{extraClass: 'td__form'})
-
-    <!-- isAuth == true -->
-    @@include('./common/button.html',{extraClass: 'td__form', buttonText: 'Оставить запрос на консультацию'})
   </section>
-</div>

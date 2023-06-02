@@ -1,5 +1,7 @@
-$('.works__list')
+const swiper = $('.works__list')
   .slick({
+    autoplay: true,
+    draggable: true,
     dots: true,
     dotsClass: 'works__dots',
     arrows: true,
@@ -8,21 +10,20 @@ $('.works__list')
     speed: 300,
     centerMode: true,
     centerPadding: 0,
-    draggable: false,
     slidesToShow: 3,
     responsive: [
       {
         breakpoint: 745,
-        settings: { centerPadding: '23%', slidesToShow: 1, draggable: true },
+        settings: { centerPadding: '23%', slidesToShow: 1 },
       },
       {
         breakpoint: 641,
         settings: { centerPadding: '15%', slidesToShow: 1 },
       },
-    ],
+    ]
   })
-  .on('swipe', initDots);
-
+  .on('swipe', initDots)
+  
 initDots();
 
 $('.works__dots').on('click', () => {
